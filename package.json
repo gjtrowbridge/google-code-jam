@@ -1,8 +1,8 @@
 {
-  "name": "google-code-jam",
+  "name": "google-code-jam-io",
   "version": "1.0.0",
   "description": "Used in all solutions",
-  "main": "code-jam-boilerplate.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
