@@ -15,3 +15,7 @@ For example, you could run
 `node example_solution.js example_input.txt example_output.txt`
 
 Which will read in the file `example_input.txt` and write to the file `example_output.txt`
+
+Update: I wasn't sure if this was allowed.  And it IS: https://code.google.com/codejam/faq.html#4-6
+
+WOOP WOOP!  So I'd encourage everyone who's interested to use this in Google Code Jam.
