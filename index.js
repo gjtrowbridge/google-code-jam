@@ -3,14 +3,14 @@ var fs = require('fs');
 googleCodeJamIo = {};
 
 if (process.argv.length !== 4) {
-  throw 'Usage is node file_with_google_code_jam_io_required.js [input file] [output file]';
+  throw 'Usage is `node file_with_google_code_jam_io_required.js [input file] [output file]`';
 }
-var inputFile = process.argv[2];
-var outputFile = process.argv[3];
+googleCodeJamIo.inputFile = process.argv[2];
+googleCodeJamIo.outputFile = process.argv[3];
 
 googleCodeJamIo.readFileAsyncByLine = function(fn) {
 
-  var rs = fs.createReadStream(inputFile);
+  var rs = fs.createReadStream(googleCodeJamIo.inputFile);
   var remaining = '';
 
   rs.on('data', function(data) {
@@ -33,19 +33,23 @@ googleCodeJamIo.readFileAsyncByLine = function(fn) {
 };
 
 googleCodeJamIo.readFileSync = function() {
-  var data = fs.readFileSync(inputFile, 'utf8');
+  var data = fs.readFileSync(googleCodeJamIo.inputFile, 'utf8');
   return data;
 };
 
 googleCodeJamIo.writeToFile = function(str) {
-  fs.writeFileSync(outputFile, str);
+  fs.writeFileSync(googleCodeJamIo.outputFile, str);
 };
 
 googleCodeJamIo.appendToFile = function(str, suffix) {
   if (suffix === undefined) {
     suffix = '\n';
   }
-  fs.appendFileSync(outputFile, str + suffix);
+  fs.appendFileSync(googleCodeJamIo.outputFile, str + suffix);
+};
+
+googleCodeJamIo.deleteoutputFile = function() {
+  fs.unlink(googleCodeJamIo.outputFile);
 };
 
 module.exports = googleCodeJamIo;
