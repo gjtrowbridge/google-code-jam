@@ -1,15 +1,14 @@
 // Boiler plate code to read in files / spit out output
 var fs = require('fs');
-boilerPlateHelpers = {};
+googleCodeJamIo = {};
 
 if (process.argv.length !== 4) {
-  console.log('Usage is node code-jame-boilerplate [input file] [output file]');
-  return false;
+  throw 'Usage is node file_with_google_code_jam_io_required.js [input file] [output file]';
 }
 var inputFile = process.argv[2];
 var outputFile = process.argv[3];
 
-boilerPlateHelpers.readFileAsyncByLine = function(fn) {
+googleCodeJamIo.readFileAsyncByLine = function(fn) {
 
   var rs = fs.createReadStream(inputFile);
   var remaining = '';
@@ -33,20 +32,20 @@ boilerPlateHelpers.readFileAsyncByLine = function(fn) {
 
 };
 
-boilerPlateHelpers.readFileSync = function() {
+googleCodeJamIo.readFileSync = function() {
   var data = fs.readFileSync(inputFile, 'utf8');
   return data;
 };
 
-boilerPlateHelpers.writeToFile = function(str) {
+googleCodeJamIo.writeToFile = function(str) {
   fs.writeFileSync(outputFile, str);
 };
 
-boilerPlateHelpers.appendToFile = function(str, suffix) {
+googleCodeJamIo.appendToFile = function(str, suffix) {
   if (suffix === undefined) {
     suffix = '\n';
   }
   fs.appendFileSync(outputFile, str + suffix);
 };
 
-module.exports = boilerPlateHelpers;
+module.exports = googleCodeJamIo;
