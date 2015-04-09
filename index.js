@@ -48,7 +48,7 @@ googleCodeJamIo.appendToFile = function(str, suffix) {
   fs.appendFileSync(googleCodeJamIo.outputFile, str + suffix);
 };
 
-googleCodeJamIo.deleteoutputFile = function() {
+googleCodeJamIo.deleteOutputFile = function() {
   fs.unlink(googleCodeJamIo.outputFile);
 };
 
