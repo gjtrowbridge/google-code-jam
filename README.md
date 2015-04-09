@@ -12,4 +12,6 @@ Navigate to this directory
 Then you can require the helper methods into any of your javascript files to make input/output super easy on the command line.
 
 For example, you could run
-`node example_solution.js inputfile.txt outputfile.txt`
+`node example_solution.js example_input.txt example_output.txt`
+
+Which will read in the file `example_input.txt` and write to the file `example_output.txt`
