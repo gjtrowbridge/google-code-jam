@@ -49,7 +49,7 @@ googleCodeJamIo.appendToFile = function(str, suffix) {
 };
 
 googleCodeJamIo.deleteOutputFile = function() {
-  if (fs.exists(googleCodeJamIo.outputFile, function(exists) {
+  fs.exists(googleCodeJamIo.outputFile, function(exists) {
     if (exists) {
       fs.unlink(googleCodeJamIo.outputFile);
     }

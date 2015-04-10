@@ -1,6 +1,6 @@
 {
   "name": "google-code-jam-io",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Used in all solutions",
   "main": "index.js",
   "scripts": {
