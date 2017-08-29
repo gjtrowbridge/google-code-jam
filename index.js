@@ -51,7 +51,7 @@ googleCodeJamIo.appendToFile = function(str, suffix) {
 googleCodeJamIo.deleteOutputFile = function() {
   fs.exists(googleCodeJamIo.outputFile, function(exists) {
     if (exists) {
-      fs.unlink(googleCodeJamIo.outputFile);
+      fs.unlinkSync(googleCodeJamIo.outputFile);
     }
   })
 };
